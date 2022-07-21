@@ -1,0 +1,20 @@
+#testthisone {
+  color: rgb(0, 255, 13);
+}
+
+.mySlides {
+  display: none;
+}
+.w3-left,
+.w3-right,
+.w3-badge {
+  cursor: pointer;
+  font-size: 3rem;
+  text-shadow: 0 0 2rem #000;
+}
+.w3-badge {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0;
+  margin: 0.5rem;
+}

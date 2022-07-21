@@ -1,0 +1,12 @@
+# Excluded files and/or folders
+
+/upgrade
+
+/themes
+
+/uploads
+
+/plugins/index.php
+
+/index.php
+
