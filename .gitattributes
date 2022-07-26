@@ -1,0 +1,2 @@
+# Apply linguist (used by Github) override to all files and directories in all directories named lib, in order to treat those libraries as vendored and thus not counting towards code statistics.
+*/lib/** linguist-vendored
