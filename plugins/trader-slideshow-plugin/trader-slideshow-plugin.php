@@ -108,8 +108,11 @@ function save_slideshow_images_ajax() {
 
 	global $wpdb; // get access to the database.
 	$saved_nonce = wp_create_nonce();
+
+	// Saving the option to the database.
 	if ( isset( $_POST ['slideshowImagesUrls'] ) && wp_verify_nonce( $saved_nonce ) ) {
-		update_option( 'slideshow_images_urls', $_POST ['slideshowImagesUrls'] );
+		$urls_from_post = array_map( 'esc_url_raw', wp_unslash( $_POST['slideshowImagesUrls'] ) ); // Unslash within the array and then sanitize each array element.
+		update_option( 'slideshow_images_urls', $urls_from_post );
 	}
 
 	wp_die(); // terminate immediately and return a proper response.
