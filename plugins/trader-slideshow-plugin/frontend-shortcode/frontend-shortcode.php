@@ -50,20 +50,20 @@ function enqueue_slideshow_scripts() {
 
 add_shortcode( 'myawesomecar', 'my_slideshow' );
 
-function my_slideshow( $atts = array(), $content = null ) {
-	// Store the HTML output content
+/**
+ * To output the slideshow HTML code.
+ */
+function my_slideshow() {
+	// Store the HTML output content.
 	$content = '
-	<div class="w3-container">
-</div>
-
-<div class="w3-content w3-display-container" style="max-width:800px" id="slideshow-images-container">
-  <img class="mySlides" src="http://localhost:10004/wp-content/uploads/2022/07/lexus_rx-350.jpg" style="width:100%" >
-  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" id="slideshow-buttons" style="width:100%">
-    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-  </div>
-</div>
+		<div class="w3-content w3-display-container" style="max-width:800px" id="slideshow-images-container">
+			<img class="mySlides" src="" style="width:100%" >
+			<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" id="slideshow-buttons" style="width:100%">
+				<div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+				<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+				<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+			</div>
+		</div>
 	';
 
 	return $content;
