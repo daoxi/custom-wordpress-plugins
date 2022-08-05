@@ -7,12 +7,15 @@
 
 add_action( 'wp_enqueue_scripts', 'enqueue_slideshow_scripts' );
 
+/**
+ * Used to enqueue the external JavaScript and CSS.
+ */
 function enqueue_slideshow_scripts() {
 	wp_enqueue_script(
 		'data-script',
 		plugin_dir_url( __FILE__ ) . 'js/data.js',
 		array( 'jquery' ),
-		false,
+		'1.0.0',
 		false
 	);
 
@@ -24,21 +27,23 @@ function enqueue_slideshow_scripts() {
 		'slideshow-script',
 		plugin_dir_url( __FILE__ ) . 'js/slideshow-script.js',
 		array(),
-		false,
+		'1.0.0',
 		true
 	);
 
-	// enqueue the W3.CSS library
+	// Enqueue the W3.CSS library.
 	wp_enqueue_style(
 		'w3_css',
 		plugin_dir_url( __FILE__ ) . '../lib/w3css/w3.css',
-		array()
+		array(),
+		'4.15'
 	);
-	// Enqueue the css file for handling the slideshow style
+	// Enqueue the css file for handling the slideshow style.
 	wp_enqueue_style(
 		'slideshow_buttons_css',
 		plugin_dir_url( __FILE__ ) . 'css/slideshow_buttons.css',
-		array()
+		array(),
+		'1.0.0'
 	);
 
 }
