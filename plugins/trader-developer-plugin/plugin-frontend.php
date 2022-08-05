@@ -1,6 +1,6 @@
 <?php
 /**
- * Trader Developer Plugin
+ * Plugin Frontend
  *
  * @package Plugin_Frontend
  */

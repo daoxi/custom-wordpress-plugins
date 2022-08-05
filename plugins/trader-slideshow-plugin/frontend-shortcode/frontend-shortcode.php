@@ -1,5 +1,12 @@
 <?php
- add_action( 'wp_enqueue_scripts', 'enqueue_slideshow_scripts' );
+/**
+ * Frontend Shortcode
+ *
+ * @package Frontend_Shortcode
+ */
+
+add_action( 'wp_enqueue_scripts', 'enqueue_slideshow_scripts' );
+
 function enqueue_slideshow_scripts() {
 	wp_enqueue_script(
 		'data-script',
